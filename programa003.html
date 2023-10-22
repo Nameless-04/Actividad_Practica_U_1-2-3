@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="Viewport" content="width=device-width, initial-scale=1"> 
+<title>Programa 003</title>
+</head>
+<body>
+<h1>Pago semanal</h1>
+<script type="text/javascript">
+let pagoBase = parseFloat(prompt("Ingrese su pago base por hora:"));
+let horasTrabajadas = parseInt(prompt("Ingrese las horas trabajadas:"));
+
+let pagoTotal = 0;
+
+if (horasTrabajadas <= 40) {
+  pagoTotal = horasTrabajadas * pagoBase;
+} else if (horasTrabajadas <= 47) {
+  let horasNormales = 40;
+  let horasExtras = horasTrabajadas - horasNormales;
+  pagoTotal = (horasNormales * pagoBase) + (horasExtras * pagoBase * 2);
+} else {
+  let horasNormales = 40;
+  let horasExtrasDobles = 7;
+  let horasExtrasTriples = horasTrabajadas - (horasNormales + horasExtrasDobles);
+  pagoTotal = (horasNormales * pagoBase) + (horasExtrasDobles * pagoBase * 2) + (horasExtrasTriples * pagoBase * 3);
+}
+
+document.write("El pago total es: " + pagoTotal);
+
+</script>
+</body>
+</htmL>

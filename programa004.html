@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="Viewport" content="width=device-width, initial-scale=1"> 
+<title>Programa004</title>
+</head>
+<body>
+<h1>Conversor de unidades</h1>
+<script type="text/javascript">
+
+
+while (true) {
+let cantidad = parseFloat(prompt("Ingresa la cantidad a convertir inicialmente en metros:"));
+let conversion = parseInt(prompt("Selecciona la conversión a realizar:\n 1. Metro \n 2. Centímetro \n 3. Pie \n 4. Yarda"));
+
+let resultado;
+let nombreConversion;
+
+switch (conversion) {
+  case 1:
+    resultado = cantidad * 1;
+    nombreConversion = "Metro";
+    break;
+  case 2:
+    resultado = cantidad * 100;
+    nombreConversion = "Centímetro";
+    break;
+  case 3:
+    resultado = cantidad * 3.2808;
+    nombreConversion = "Pie";
+    break;
+  case 4:
+    resultado = cantidad * 1.0936;
+    nombreConversion = "Yarda";
+    break;
+  default:
+    document.write("Opción de conversión inválida");
+}
+
+document.write("La conversión realizada es: " + nombreConversion + "<br>");
+document.write("El resultado de la conversión es: " + resultado + "<br>");
+
+
+  let reiniciar = prompt("¿Otra operación? (Si/No)").toUpperCase();
+
+  if (reiniciar !== "SI") {
+    break;
+  }
+}
+
+
+</script>
+</body>
+</htmL>

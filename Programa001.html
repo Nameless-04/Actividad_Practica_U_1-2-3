@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="Viewport" content="width=device-width, initial-scale=1"> 
+<title>Programa 001</title>
+</head>
+<body>
+<h1>Generador de RFC</h1>
+<script type="text/javascript">
+	
+let nombre = prompt("Ingrese su nombre:");
+let apellidoPaterno = prompt("Ingrese su apellido paterno:");
+let apellidoMaterno = prompt("Ingrese su apellido materno:");
+let añoNacimiento = parseInt(prompt("Ingrese su año de nacimiento:"));
+let mesNacimiento = parseInt(prompt("Ingrese su mes de nacimiento:"));
+let diaNacimiento = parseInt(prompt("Ingrese su día de nacimiento:"));
+
+let rfc = apellidoPaterno.charAt(0) + apellidoPaterno.charAt(1) +
+ apellidoMaterno.charAt(0) + nombre.charAt(0) + 
+ (añoNacimiento % 100).toString().padStart(2, '0') +
+  mesNacimiento.toString().padStart(2, '0') +
+   diaNacimiento.toString().padStart(2, '0');
+document.write("RFC: " + rfc);
+
+</script>
+</body>
+</htmL>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="Viewport" content="width=device-width, initial-scale=1"> 
+<title>Programa 002</title>
+</head>
+<body>
+<h1>Indice de masa corporal IMC</h1>
+<script type="text/javascript">
+let peso = parseFloat(prompt("Escribe tu peso en kilogramos:")); 
+let altura = parseFloat(prompt("Escribe tu altura en metros:")); 
+let IMC = peso / (altura * altura);
+
+document.write(IMC);
+
+if (IMC > 25) 
+	{ document.write(" --> Peso Alto, haga dieta y ejercicio"); 
+} 
+else if (IMC >= 22 && IMC <= 25) 
+	{ document.write(" --> Peso Correcto"); 
+} 
+else { document.write(" --> Peso bajo, consulta con un profesional de la salud"); 
+}
+
+</script>
+</body>
+</htmL>
